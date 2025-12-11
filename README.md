@@ -1,9 +1,13 @@
 
 ### QOI Tool - Fast Image Converter & Viewer
-https://img.shields.io/badge/Format-QOI-green
-https://img.shields.io/badge/Support-PPM_P6-blue
-https://img.shields.io/badge/Language-C-00599C
-https://img.shields.io/badge/Graphics-SDL3-FF6B00
+
+<p>
+  <img alt="QOI Format" src="https://img.shields.io/badge/Format-QOI-green" />
+  <img alt="PPM P6 Support" src="https://img.shields.io/badge/Support-PPM_P6-blue" />
+  <img alt="C Language" src="https://img.shields.io/badge/Language-C-00599C" />
+  <img alt="SDL3" src="https://img.shields.io/badge/Graphics-SDL3-FF6B00" />
+</p>
+
 
 A high-performance command-line tool for encoding, decoding, and viewing images in the Quite OK Image (QOI) format and PPM P6 format. Built in C with SDL3 for maximum performance and minimal dependencies.
 
