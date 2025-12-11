@@ -8,21 +8,21 @@
 A high-performance command-line tool for encoding, decoding, and viewing images in the Quite OK Image (QOI) format and PPM P6 format. Built in C with SDL3 for maximum performance and minimal dependencies.
 
 ## ✨ Features
-# 🚀 Blazing Fast - Native C implementation with optimized encoding/decoding
+🚀 Blazing Fast - Native C implementation with optimized encoding/decoding
 
-# 🔄 Bidirectional Conversion:
+🔄 Bidirectional Conversion:
 
 PPM P6 → QOI encoding
 
 QOI → PPM P6 decoding
 
-# 👁️ Built-in Viewer - View images directly in SDL3 window
+👁️ Built-in Viewer - View images directly in SDL3 window
 
-# 📦 Lossless Compression - QOI format preserves exact pixel data
+📦 Lossless Compression - QOI format preserves exact pixel data
 
-# 🔧 Auto-detection - Automatically detects file format by extension
+🔧 Auto-detection - Automatically detects file format by extension
 
-# 🎨 True Color - Full 24-bit RGB support
+🎨 True Color - Full 24-bit RGB support
 
 ## 📋 Requirements
 # Dependencies
@@ -117,24 +117,22 @@ Simple Implementation - Single-file decoder fits in ~200 lines of C
 No Dependencies - For core encoding/decoding operations
 
 ## 🏗️ Project Structure
-.
-├── cli.c           # CLI interface and argument parsing
-├── cli.h
-├── decode.c        # QOI → PPM P6 decoding
-├── decode.h
-├── encode.c        # PPM P6 → QOI encoding
-├── encode.h
-├── main.c
-├── Makefile        # Build configuration
-├── out
-│   ├── debug
-│   └── release
-├── README.md       # This file
-├── script
-├── script.c
-├── types.h         # Common type definitions
-├── viewer.c        # SDL3-based image viewer
-└── viewer.h
+. <br>
+├── cli.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           # CLI interface and argument parsing <br>
+├── cli.h<br>
+├── decode.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       # QOI → PPM P6 decoding<br>
+├── decode.h<br>
+├── encode.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       # PPM P6 → QOI encoding<br>
+├── encode.h<br>
+├── main.c<br>
+├── Makefile    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    # Build configuration<br>
+├── out<br>
+│   ├── debug<br>
+│   └── release<br>
+├── README.md &nbsp;&nbsp;# This file<br>
+├── types.h &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         # Common type definitions<br>
+├── viewer.c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        # SDL3-based image viewer<br>
+└── viewer.h<br>
 
 
 ## 🔧 Technical Details
