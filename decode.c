@@ -52,7 +52,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
   u8 len_widths = u32_to_str(width, widths);
   u8 len_heights = u32_to_str(height, heights);
   *p6_buffer = *p6_buffer == NULL ? malloc(9 + len_heights + len_widths + 3 * width * height) : *p6_buffer;
-  plog("p6_buffer size: %d", 9 + len_widths + len_heights);
 
   (*p6_buffer)[0] = 'P';
   (*p6_buffer)[1] = '6';
@@ -89,7 +88,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
       p6_cursor += 3;
       qoi_cursor ++;
       prev = (struct p6_pixel){qoi_pix.r, qoi_pix.g, qoi_pix.b};
-      plog("INDEX -> curr: r: %d, g: %d, b: %d", prev.r, prev.g, prev.b);
       continue;
     }
     // QOI_OP_DIFF
@@ -104,7 +102,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
       (*p6_buffer)[p6_cursor + 2] = curr.b;
       array[hash(curr)] = (struct qoi_pixel){curr.r, curr.g, curr.b, 255};
       prev = curr;
-      plog("DIFF -> curr: r: %d, g: %d, b: %d", prev.r, prev.g, prev.b);
       p6_cursor += 3;
       qoi_cursor ++;
       continue;
@@ -125,7 +122,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
       (*p6_buffer)[p6_cursor + 2] = curr.b;
       array[hash(curr)] = (struct qoi_pixel){curr.r, curr.g, curr.b, 255};
       prev = curr;
-      plog("LUMA -> curr: r: %d, g: %d, b: %d", prev.r, prev.g, prev.b);
       p6_cursor += 3;
       qoi_cursor += 2;
       continue;
@@ -138,7 +134,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
       (*p6_buffer)[p6_cursor + 2] = curr.b; 
       array[hash(curr)] = (struct qoi_pixel){curr.r, curr.g, curr.b, 255};
       prev = curr;
-      plog("RGB -> curr: r: %d, g: %d, b: %d", curr.r, curr.g, curr.b);
       p6_cursor += 3;
       qoi_cursor += 4;
       continue;
@@ -155,7 +150,6 @@ long decode(u8* qoi_buffer, u8** p6_buffer ){
       (*p6_buffer)[p6_cursor+j] = curr.r;
       (*p6_buffer)[p6_cursor+j+1] = curr.g;
       (*p6_buffer)[p6_cursor+j+2] = curr.b;
-      plog("RUN -> curr: r: %d, g: %d, b: %d", prev.r, prev.g, prev.b);
     }
     p6_cursor += j;
     qoi_cursor ++;

@@ -3,10 +3,10 @@ CC = gcc
 CFLAGS_DEBUG   = -Wall -Wextra -g -O0 
 CFLAGS_RELEASE = -Wall -Wextra -O3 -DNDEBUG
 
-LDFLAGS = -lpretty
+LDFLAGS = -lpretty -lSDL3
 
 # Project structure
-SRC = main.c cli.c encode.c decode.c
+SRC = main.c cli.c encode.c decode.c viewer.c
 OBJ_DEBUG   = $(patsubst %.c, out/debug/%.o, $(SRC))
 OBJ_RELEASE = $(patsubst %.c, out/release/%.o, $(SRC))
 
